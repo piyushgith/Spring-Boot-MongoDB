@@ -17,7 +17,7 @@ public class UserMongoDBController {
 
 	@Autowired
 	private UserRepository userRepository;
-
+	// Swagger ==> http://localhost:8085/swagger-ui.html 
 	@GetMapping("/find/all")
 	public List<User> getAllUser() {
 		return userRepository.findAll();
