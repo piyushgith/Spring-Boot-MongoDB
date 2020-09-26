@@ -18,6 +18,10 @@ public class UserMongoDBController {
 	@Autowired
 	private UserRepository userRepository;
 	// Swagger ==> http://localhost:8085/swagger-ui.html 
+	
+	//not needed always
+	//@ApiImplicitParams({ @ApiImplicitParam(paramType = "header", name = "x-locale", example = "en"),
+	//@ApiImplicitParam(paramType = "body", dataType = "Employee") })
 	@GetMapping("/find/all")
 	public List<User> getAllUser() {
 		return userRepository.findAll();
